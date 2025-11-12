@@ -1,0 +1,56 @@
+/* ------------------------------
+   styles/main.css (A07 Chapter 5: Box Model)
+   ------------------------------ */
+
+/* 1) Reset selector */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 2) Default spacing for type and lists */
+h1, h2, h3, p, ul { padding-top: .5em; padding-bottom: .5em; }
+ul { margin-left: 2em; }
+
+a:focus, a:hover { font-style: italic; }
+
+/* 3) Body centered with border */
+body {
+  width: 80%;
+  margin: 0 auto;
+  border: 2px solid #931420; /* accent color */
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fffded;
+}
+
+/* 4) Header bottom border and gradient background */
+header {
+  border-bottom: 2px solid #931420;
+  background-image: linear-gradient(
+    30deg, #f6bb73 0%, #ffffff 30%, #ffffff 65%, #f6bb73 100%
+  );
+}
+
+/* Header spacing tweaks per spec */
+header img { margin: .75em 1em; }
+header h2 { padding-bottom: 0; }
+header h3 { padding-bottom: 1em; font-style: italic; }
+.shadow { text-shadow: 2px 2px 2px #800000; }
+
+/* 5) Main h1 top and bottom borders */
+main h1 {
+  border-top: 2px solid #931420;
+  border-bottom: 2px solid #931420;
+}
+
+/* 6) Padding for main and footer paragraph */
+main { padding: 0 1em 1em; }
+
+footer { background-color: #931420; }
+footer p { color: #ffffff; padding: 1em 0; text-align: center; }
+
+/* 7) Blockquote italic and indented */
+blockquote { font-style: italic; padding-left: 2em; }
+
+/* 8) Speaker images inside main get double border and rounded corners */
+main img {
+  border: 4px double #931420;
+  border-radius: 10px;
+}

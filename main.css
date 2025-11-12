@@ -1,0 +1,108 @@
+/* Reset & base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { background: #fff; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: calc(90% + 0.2vw);
+  line-height: 1.5;
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+  border: 3px solid #931420;
+  background-color: #fffded;
+}
+a:focus, a:hover { font-style: italic; }
+
+/* Header */
+header {
+  padding: 1.5em 0 2em 0;
+  border-bottom: 3px solid #931420;
+  background-image: linear-gradient(
+    30deg, #f6bb73 0%, #f6bb73 30%, #fff 50%, #f6bb73 80%, #f6bb73 100%
+  );
+}
+header .logo {
+  float: left;
+  margin: 0 30px 0 0;
+  width: 100%;
+  max-width: 80px;
+  min-width: 40px;
+  height: auto;
+}
+header h2 { font-size: 175%; color: #800000; }
+header h3 { font-size: 130%; font-style: italic; }
+.shadow { text-shadow: 2px 2px 2px #800000; }
+
+/* Layout: Flexbox two-column with aside first visually */
+main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 20px 20px 20px;
+  clear: left;
+}
+aside {
+  order: 0;
+  flex: 0 0 215px;
+  padding: 0 0 20px 0;
+}
+section {
+  order: 1;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Headings and text rhythm */
+section h1 {
+  font-size: 150%;
+  padding: .3em 0;
+}
+section h2, aside h2 {
+  color: #800000;
+  font-size: 130%;
+  padding: .5em 0 .25em 0;
+}
+section h3, aside h3 { font-size: 105%; padding-bottom: .25em; }
+section p { padding-bottom: .5em; }
+section blockquote { padding: 0 2em; font-style: italic; }
+section ul { padding: 0 0 .25em 1.25em; }
+section li { padding-bottom: .35em; }
+
+/* Featured article */
+.featured {
+  padding: .5em 0;
+  border-top: 3px solid #931420;
+  border-bottom: 3px solid #931420;
+}
+.featured img {
+  float: right;
+  margin: .5em 0 1em 1em;
+  border: 1px solid #000;
+  width: 100%;
+  max-width: 250px;
+  min-width: 120px;
+  height: auto;
+}
+
+/* Aside media */
+aside img {
+  display: block;
+  width: 100%;
+  max-width: 75px;
+  min-width: 40px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+/* Footer */
+footer { background: #931420; clear: both; }
+footer p { text-align: center; color: #fff; padding: 1em 0; }
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  header .logo { float: none; display: block; margin: 0 auto 1rem; }
+  main { flex-direction: column; }
+  aside { order: 0; flex: 1 1 auto; }
+  section { order: 1; }
+  .featured img { float: none; margin: .5em auto 1em; display: block; }
+}
